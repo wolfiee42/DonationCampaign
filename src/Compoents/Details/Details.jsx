@@ -27,7 +27,7 @@ const Details = () => {
                 <img className="w-2/3 mx-auto rounded-lg" src={picture} alt="" />
                 <Link>
                     <div className=" bg-slate-700 hero-overlay bg-opacity-95">
-                        <button style={btnBGColor} onClick={handleBtn} className="py-2 px-4 rounded font-semibold text-white absolute bottom-7 left-60 duration-200	">Donate {price}</button>
+                        <button style={btnBGColor} onClick={handleBtn} className="py-2 px-4 rounded font-semibold text-white absolute bottom-7 left-60">Donate {price}</button>
                     </div>
                 </Link>
             </div>
