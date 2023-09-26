@@ -7,7 +7,6 @@ const Root = () => {
             <div className="max-w-[85%] mx-auto">
                 <Navbar></Navbar>
             </div>
-            <h2 className="text-xl text-center">from root</h2>
             <Outlet></Outlet>
         </div>
     );
