@@ -4,12 +4,22 @@ const Cards = ({ datum }) => {
     const { picture, title, category, category_bg, text_and_button_bg, card_bg } = datum;
     console.log(card_bg);
 
+    const cardColor = {
+        backgroundColor: card_bg
+    }
+    const categoryColor = {
+        backgroundColor: category_bg
+    }
+    const textcolor = {
+        color: text_and_button_bg
+    }
+
     return (
         <div className="max-w-[85%] mx-auto my-5 ">
-            <div className={`card card-compact w-72 shadow-xl bg-[${card_bg}]`}>
+            <div style={cardColor} className="card card-compact w-72 shadow-xl">
                 <img src={picture} alt="" />
-                <div className={`card-body text-[${text_and_button_bg}]`}>
-                    <h2 className={`p-1 bg-[${category_bg}] w-14 rounded-lg font-semibold text-center`} >{category}</h2>
+                <div style={textcolor} className="card-body">
+                    <h2 style={categoryColor} className="p-1 w-[30%] rounded-lg font-semibold text-center" >{category}</h2>
                     <h2 className="card-title">{title}</h2>
                 </div>
             </div>
