@@ -9,6 +9,7 @@ import Root from './Compoents/Root/Root.jsx';
 import Home from './Compoents/Home/Home.jsx';
 import Donation from './Compoents/Donation/Donation.jsx';
 import Statistics from './Compoents/Statistics/statistics.jsx';
+import Details from './Compoents/Details/Details';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: '/statistics',
         element: <Statistics></Statistics>
+      },
+      {
+        path: '/donationdetails/:id',
+        element: <Details></Details>
       }
     ]
   }
