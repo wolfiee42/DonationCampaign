@@ -5,7 +5,8 @@ import StoredData from "../StoredData/StoredData";
 
 const Donation = () => {
     const data = useLoaderData()
-    const [storedData, setStoredData] = useState([])
+    const [storedData, setStoredData] = useState([]);
+    const [dataLength, setDataLength] = useState(4)
     useEffect(() => {
         const storeditems = getStoredData();
         const donatedcard = data.filter(datum => storeditems.includes(datum.id));
@@ -13,10 +14,15 @@ const Donation = () => {
     }, [data])
 
     return (
-        <div className="grid grid-cols-2 gap-5">
-            {
-                storedData.map(dataStored => <StoredData key={dataStored.id} dataStored={dataStored}></StoredData>)
-            }
+        <div>
+            <div className="grid grid-cols-2 gap-5">
+                {
+                    storedData.slice(0, dataLength).map(dataStored => <StoredData key={dataStored.id} dataStored={dataStored}></StoredData>)
+                }
+            </div>
+            <div className={`flex justify-center items-center ${dataLength === storedData.length ? 'hidden' : ''}`}>
+                <button onClick={() => setDataLength(storedData.length)} className="btn btn-accent ">See all</button>
+            </div>
         </div>
     );
 };
