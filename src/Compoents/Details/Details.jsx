@@ -1,5 +1,6 @@
 import { Link, useLoaderData, useParams } from "react-router-dom";
 import Swal from 'sweetalert2'
+import { saveItems } from "../../utilities/utilities";
 
 const Details = () => {
     const data = useLoaderData();
@@ -13,6 +14,7 @@ const Details = () => {
         backgroundColor: text_and_button_bg
     }
     const handleBtn = () => {
+        saveItems(idInt);
         Swal.fire(
             'Congratulations!',
             ' You have Successfully Donated.',
