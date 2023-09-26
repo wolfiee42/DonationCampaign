@@ -12,12 +12,13 @@ import Statistics from './Compoents/Statistics/statistics.jsx';
 
 const router = createBrowserRouter([
   {
-    path:'/',
+    path: '/',
     element: <Root></Root>,
     children: [
       {
         path: '/',
-        element: <Home></Home>
+        element: <Home></Home>,
+        loader: () => fetch('../public/data.json')
       },
       {
         path: '/donation',
@@ -32,6 +33,6 @@ const router = createBrowserRouter([
 ])
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+    <RouterProvider router={router} />
   </React.StrictMode>,
 )
