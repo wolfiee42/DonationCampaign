@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 const Cards = ({ datum }) => {
     const { id, picture, title, category, category_bg, text_and_button_bg, card_bg } = datum;
-    console.log(card_bg);
 
     const cardColor = {
         backgroundColor: card_bg

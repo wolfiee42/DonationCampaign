@@ -7,9 +7,11 @@ const Details = () => {
     const idInt = parseInt(id);
     const isActice = data.find(datum => datum.id === idInt);
     console.log(isActice);
-    const { picture, title, description, price } = isActice;
+    const { picture, title, description, price, text_and_button_bg } = isActice;
 
-
+    const btnBGColor = {
+        backgroundColor: text_and_button_bg
+    }
     const handleBtn = () => {
         Swal.fire(
             'Congratulations!',
@@ -23,7 +25,7 @@ const Details = () => {
                 <img className="w-2/3 mx-auto rounded-lg" src={picture} alt="" />
                 <Link>
                     <div className=" bg-slate-700 hero-overlay bg-opacity-95">
-                        <button onClick={handleBtn} className="py-2 px-4 bg-red-500 hover:bg-red-600 rounded font-semibold text-white absolute bottom-7 left-60 duration-200	">Donate {price}</button>
+                        <button style={btnBGColor} onClick={handleBtn} className="py-2 px-4 rounded font-semibold text-white absolute bottom-7 left-60 duration-200	">Donate {price}</button>
                     </div>
                 </Link>
             </div>
