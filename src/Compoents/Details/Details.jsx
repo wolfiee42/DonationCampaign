@@ -23,18 +23,20 @@ const Details = () => {
     }
     return (
         <div className="max-w-[85%] mx-auto my-10">
-            <div className="relative hero">
+
+            <div className="relative">
                 <img className="w-2/3 mx-auto rounded-lg" src={picture} alt="" />
-                <Link>
-                    <div className=" bg-slate-700 hero-overlay bg-opacity-95">
-                        <button style={btnBGColor} onClick={handleBtn} className="py-2 px-4 rounded font-semibold text-white absolute bottom-7 left-60">Donate {price}</button>
-                    </div>
-                </Link>
+
+                <div className="bg-[#0b0b0b80] absolute bottom-0 left-[201px] rounded-lg h-20 w-[808px] flex items-center">
+                    <button style={btnBGColor} onClick={handleBtn} className="py-2 px-4 ml-4 rounded font-semibold text-white">Donate {price}</button>
+                </div>
             </div>
+
             <div className="w-2/3 mx-auto">
                 <h2 className="my-5 text-3xl font-bold">{title}</h2>
                 <p className="text-gray-600 mb-10">{description}</p>
             </div>
+
         </div>
     );
 };
