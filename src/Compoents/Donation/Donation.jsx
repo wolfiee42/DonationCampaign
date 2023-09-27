@@ -11,7 +11,7 @@ const Donation = () => {
         const storeditems = getStoredData();
         const donatedcard = data.filter(datum => storeditems.includes(datum.id));
         setStoredData(donatedcard)
-    }, [data])
+    }, [data]);
 
     return (
         <div>
@@ -20,8 +20,10 @@ const Donation = () => {
                     storedData.slice(0, dataLength).map(dataStored => <StoredData key={dataStored.id} dataStored={dataStored}></StoredData>)
                 }
             </div>
-            <div className={`flex justify-center items-center ${dataLength === storedData.length ? 'hidden' : ''}`}>
-                <button onClick={() => setDataLength(storedData.length)} className="btn btn-accent ">See all</button>
+            <div className={storedData.length < 4 ? "hidden" : ''}>
+                <div className={`flex justify-center items-center ${dataLength === storedData.length ? 'hidden' : ''}`}>
+                    <button onClick={() => setDataLength(storedData.length)} className="btn btn-accent ">See all</button>
+                </div>
             </div>
         </div>
     );
