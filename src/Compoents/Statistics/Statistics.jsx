@@ -14,8 +14,6 @@ const Statistics = () => {
 
     const doonated = (donated / totalDonationableCards.length) * 100;
     const remaining = 100 - doonated;
-    console.log(doonated);
-    console.log(remaining);
 
     const data = [
         ["Contribution", "In Number"],
@@ -24,7 +22,7 @@ const Statistics = () => {
     ]
 
     const options = {
-        title: "Your contribution in  Stat"
+        title: "Your contribution in  Stats"
     }
 
 
