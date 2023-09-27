@@ -12,10 +12,15 @@ const Statistics = () => {
         setDonated(stored.length);
     }, [totalDonationableCards])
 
+    const doonated = (donated / totalDonationableCards.length) * 100;
+    const remaining = 100 - doonated;
+    console.log(doonated);
+    console.log(remaining);
+
     const data = [
         ["Contribution", "In Number"],
-        ["Total Donations", totalDonationableCards.length],
-        ["Your Donation", donated],
+        ["Total Donations", remaining],
+        ["Your Donation", doonated],
     ]
 
     const options = {
