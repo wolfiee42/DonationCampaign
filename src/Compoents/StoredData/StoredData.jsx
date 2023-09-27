@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 const StoredData = ({ dataStored }) => {
-    console.log(dataStored);
 
     const {id,  picture, category, title, price, category_bg, card_bg, text_and_button_bg } = dataStored;
 
