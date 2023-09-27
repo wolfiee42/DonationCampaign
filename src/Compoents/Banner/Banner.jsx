@@ -1,20 +1,7 @@
-import { useRef, useState } from "react";
+
 
 const Banner = () => {
-    /* const categories = data.map(datum => datum.category)
-    console.log(categories);
-
-    const [inputValue, setInputValue] = useState('')
-    const inputRef = useRef(null);
-    const handleForm = e => {
-        e.preventDefault();
-        setInputValue(inputRef.current.value);
-    } 
-    onSubmit={handleForm} 
-    ref={inputRef}
-    console.log(inputValue); */
-
-
+    
     return (
         <div>
             <div className="hero bg-cover" style={{ backgroundImage: 'url(https://i.ibb.co/B3tqKvm/Rectangle-4281.png)' }}>
