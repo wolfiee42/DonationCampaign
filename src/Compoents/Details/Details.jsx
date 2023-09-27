@@ -22,12 +22,12 @@ const Details = () => {
         )
     }
     return (
-        <div className="max-w-[85%] mx-auto my-10">
+        <div className="lg:max-w-[85%] mx-auto my-10">
 
             <div className="relative">
                 <img className="w-2/3 mx-auto rounded-lg" src={picture} alt="" />
 
-                <div className="bg-[#0b0b0b80] absolute bottom-0 left-[201px] rounded-lg h-20 w-[808px] flex items-center">
+                <div className="bg-[#0b0b0b80] absolute bottom-0 left-[70px] md:left-[128px] lg:left-[205px] rounded-lg h-14 md:h-20 w-[283px] md:w-[510px] lg:w-[815px] flex items-center">
                     <button style={btnBGColor} onClick={handleBtn} className="py-2 px-4 ml-4 rounded font-semibold text-white">Donate {price}</button>
                 </div>
             </div>
